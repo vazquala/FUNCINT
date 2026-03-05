@@ -101,7 +101,7 @@ public class FunctionalActivity {
     @FunctionalInterface
     public interface PowerUp {
 
-        double calculateSpeed(int currentHealth,
+        double apply(int currentHealth,
                        double currentSpeed);
     }
 
@@ -227,11 +227,11 @@ public class FunctionalActivity {
         PowerUp steadyBoost = (h, s) -> s + 2.0;
 
         // Uncomment these when your lambdas are ready:
-        // System.out.println("Standard damage (50 base, 20 armor, 1.5x crit): " + standardCalc.calculate(50, 20, 1.5));
-        // System.out.println("Piercing damage (50 base, 20 armor, 1.5x crit): " + piercingCalc.calculate(50, 20, 1.5));
-        // System.out.println("Speed boost (HP=100, speed=5.0): " + speedBoost.apply(100, 5.0));
-        // System.out.println("Speed boost (HP=30, speed=5.0): " + speedBoost.apply(30, 5.0));
-        // System.out.println("Steady boost (HP=anything, speed=5.0): " + steadyBoost.apply(50, 5.0));
+        System.out.println("Standard damage (50 base, 20 armor, 1.5x crit): " + standardCalc.calculate(50, 20, 1.5));
+        System.out.println("Piercing damage (50 base, 20 armor, 1.5x crit): " + piercingCalc.calculate(50, 20, 1.5));
+        System.out.println("Speed boost (HP=100, speed=5.0): " + speedBoost.apply(100, 5.0));
+        System.out.println("Speed boost (HP=30, speed=5.0): " + speedBoost.apply(30, 5.0));
+        System.out.println("Steady boost (HP=anything, speed=5.0): " + steadyBoost.apply(50, 5.0));
 
         System.out.println();
 
